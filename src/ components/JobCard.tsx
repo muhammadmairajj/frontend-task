@@ -84,7 +84,7 @@ export const JobCard: React.FC<JobCardProps> = ({
       <div className="flex flex-col sm:flex-row gap-2 mt-4">
         <Button
           variant="secondary"
-          className="flex-1 h-10 sm:h-11 text-[12px] sm:text-[14px] font-medium rounded-lg text-white"
+          className="flex-1 py-2 sm:py-4 text-[12px] sm:text-[14px] font-medium rounded-lg text-white"
         >
           Apply Now
         </Button>
