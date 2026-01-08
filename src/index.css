@@ -1,0 +1,313 @@
+
+@import "tailwindcss";
+
+/* Neue Haas Grotesk Display Pro Fonts */
+/* @font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-15XXThin-Trial.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-25XThin-Trial.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-35Thin-Trial.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-45Light-Trial.otf") format("opentype");
+  font-weight: 350; /* optional: Light-ish */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-55Roman-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-65Medium-Trial.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-75Bold-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("/fonts/NeueHaasGrotDisp-95Black-Trial.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* color: var(--foreground); */
+  /* background: var(--background); */
+  font-family: var(--font-neue), sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--color-primary) var(--color-accent);
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-neue: "Neue Haas Grotesk Display Pro", sans-serif;
+  --color-primary: #132c4e;
+  --color-secondary: #0154AA;
+  --color-stroke: #fff;
+  --color-gradient-primary: linear-gradient(90deg, #102440 0%, #040910 100%);
+  --color-backdrop: rgba(0, 0, 0, 0.1);
+  --color-backdrop-dark: rgba(0, 0, 0, 0.4);
+  --color-button-loading: #d1d1d1;
+  --color-caption: #d1d1d1;
+  --color-text-dark: #131313;
+  --color-input: #fff;
+  --color-bg-silver: #f2f2f2;
+  --color-white: #ffffff;
+  --color-text-value:  #0154AA;
+  --color-light: #f6f6f6;
+  --color-text-light-title: #333333;
+  --color-text-light: #585D6E;
+  --color-text-lighter: #737A91;
+  --color-drop-shadow: drop-shadow(0px 0px 6px rgb(0 0 0 / 10%));
+  --color-black: #000000;
+  --color-blue: #0000ff;
+  --color-light-grey: rgba(244, 245, 246, 1);
+  --color-surface-light: #f6f6f6;
+  --color-error: #d32f2f;
+  --color-medium-grey: #343434;
+  --color-purple: #800080;
+  --color-red: #ff0000;
+  --color-green: #008000;
+  --color-yellow: #ffff00;
+  --color-orange: #ffa500;
+  --color-pink: #ffc0cb;
+  --color-cyan: #00ffff;
+  --color-magenta: #ff00ff;
+  --color-lime: #00ff00;
+  --color-teal: #008080;
+  --color-indigo: #4b0082;
+  --color-brown: #a52a2a;
+  --color-silver: #c0c0c0;
+  --color-gold: #ffd700;
+  --color-maroon: #800000;
+  --color-navy: #000080;
+  --color-olive: #808000;
+  --color-gray: #808080;
+  --color-sky-blue: #87ceeb;
+  --color-coral: #ff7f50;
+  --color-lavender: #e6e6fa;
+  --color-turquoise: #40e0d0;
+  --color-salmon: #fa8072;
+  --color-crimson: #dc143c;
+  --color-dark-green: #006400;
+  --color-dark-orange: #ff8c00;
+  --color-dark-red: #8b0000;
+  --color-dark-violet: #9400d3;
+  --color-fire-brick: #b22222;
+  --color-forest-green: #228b22;
+  --color-dark-slate-gray: #2f4f4f;
+  --color-light-coral: #f08080;
+  --color-light-sea-green: #20b2aa;
+  --color-medium-blue: #0000cd;
+  --color-medium-violetred: #c71585;
+  --color-midnight-blue: #191970;
+  --color-peru: #cd853f;
+  --color-rosy-brown: #bc8f8f;
+  --color-sienna: #a0522d;
+  --color-slate: rgba(133, 133, 133, 1);
+  --color-slate-blue: #6a5acd;
+  --color-tomato: #ff6347;
+  --color-steel-blue: #4682b4;
+  ---color-darkish: #333;
+
+  /* Messages */
+  --color-success: #1ea97c;
+  --color-info: #3b82f6;
+  --color-warning: #cc8925;
+
+  /* Font Sizes */
+  --text-hero: 112px;
+  --text-h1: 62px;
+  --text-h2: 42px;
+  --text-h3: 36px;
+  --text-h4: 26px;
+  --text-h5: 24px;
+  --text-h6: 22px;
+  --text-body: 20px;
+  --text-body1: 18px;
+  --text-regular: 16px;
+  --text-small: 14px;
+  --text-extra: 12px;
+
+  /* Container configuration */
+  --breakpoint-*: initial; /* reset built-in breakpoints */
+  --breakpoint-xsm: 20rem; /* 320px */
+  --breakpoint-mm: 23.43rem; /* 375px-ish */
+  --breakpoint-lm: 26.5rem; /* 424px-ish */
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-xxl: 90rem; /* 1440px */
+  --breakpoint-exl: 120rem; /* 1920px */
+  /* Continer Padding */
+  --container-padding: 0.6rem; /* DEFAULT */
+  --container-padding-lg: 1rem; /* lg and up */
+}
+
+@utility container {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+@media (min-width: 64rem) { /* 1024px */
+  .container {
+    padding-left: var(--container-padding-lg);
+    padding-right: var(--container-padding-lg);
+  }
+}
+
+@utility max-w-screen-xsm {
+  /* 320px */
+  max-width: var(--breakpoint-xsm);
+}
+@utility max-w-screen-mm {
+  /* 375px-ish */
+  max-width: var(--breakpoint-mm);
+}
+@utility max-w-screen-lm {
+  /* 424px-ish */
+  max-width: var(--breakpoint-lm);
+}
+@utility max-w-screen-sm {
+  /* 640px */
+  max-width: var(--breakpoint-sm);
+}
+@utility max-w-screen-md {
+  /* 768px */
+  max-width: var(--breakpoint-md);
+}
+@utility max-w-screen-lg {
+  /* 1024px */
+  max-width: var(--breakpoint-lg);
+}
+@utility max-w-screen-xl {
+  /* 1280px */
+  max-width: var(--breakpoint-xl);
+}
+@utility max-w-screen-xxl {
+  /* 1440px */
+  max-width: var(--breakpoint-xxl);
+}
+@utility max-w-screen-exl {
+  /* 1920px */
+  max-width: var(--breakpoint-exl);
+}
+
+@utility bg-primary-black {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-black)
+  );
+}
+
+@utility bg-primary-black-reverse {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-black),
+    var(--color-primary)
+  );
+}
+
+@utility bg-table-row {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+    0deg,
+    rgba(19, 44, 78, 1) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+@utility bg-table-row-reverse {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+    180deg,
+    rgba(19, 44, 78, 1) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+@utility bg-gradient-accent {
+  background-color: rgba(199, 48, 235, 1);
+  background-image: linear-gradient(
+    180deg,
+    rgba(199, 48, 235, 1) 0%,
+    rgba(32, 81, 151, 1) 100%
+  );
+}
+
+@utility bg-gradient-primary-45 {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(
+    45deg,
+    var(--color-primary) 0%,
+    var(--color-black) 100%
+  );
+}
+
+.dark {
+}
+
+/* 
+@layer components {
+  .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+  }
+} */
+

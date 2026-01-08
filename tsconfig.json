@@ -1,0 +1,40 @@
+{  
+  "compilerOptions": {
+  "baseUrl": ".",
+  "target": "ES2020",
+  "lib": ["DOM", "DOM.Iterable", "ESNext"],
+  "allowJs": false,
+  "skipLibCheck": true,
+  "strict": true,
+  "noEmit": true,
+
+  "module": "ESNext",
+  "moduleResolution": "Bundler",
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "jsx": "react-jsx",
+
+  // "paths": {
+  //   "@/*": ["src/*"],
+  //   "@/components/*": ["src/components/*"],
+  //   "@/pages/*": ["src/pages/*"],
+  //   "@/layouts/*": ["src/layouts/*"],
+  //   "@/hooks/*": ["src/hooks/*"],
+  //   "@/services/*": ["src/services/*"],
+  //   "@/utils/*": ["src/utils/*"],
+  //   "@/types/*": ["src/types/*"]
+  // }
+  "paths": {
+    "@/*": ["./src/*"]
+  }
+},
+// "include": ["src"],
+// "exclude": ["node_modules"]
+"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+"exclude": ["node_modules"]
+  // "files": [],
+  // "references": [
+  //   { "path": "./tsconfig.app.json" },
+  //   { "path": "./tsconfig.node.json" }
+  // ]
+}
